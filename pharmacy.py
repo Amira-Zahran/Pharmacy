@@ -99,7 +99,7 @@ class Pharmacy:
         price = self.Med_price.get()
         code = self.Med_code.get()
         med = "medicines" # table name
-        additem = "insert into " + med + " values ('" + name + "','" + price + "','" + code + "')"
+        additem = "insert into " + med + " values ('" + name + "','" + price + "','" + code + "')" #columns name
 
         cur.execute(additem)
         conn.commit()
@@ -112,7 +112,7 @@ class Pharmacy:
         cur = conn.cursor()
         code = self.Med_code.get()
         med = "medicines" # table name
-        delete = "delete from  " + med + " where Med_code ='" + code + "'"
+        delete = "delete from  " + med + " where Med_code ='" + code + "'" #column name (primary key)
 
         cur.execute(delete)
         conn.commit()
